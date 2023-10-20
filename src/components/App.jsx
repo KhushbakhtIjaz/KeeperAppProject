@@ -6,7 +6,13 @@ import CreateArea from "./CreateArea";
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: "http://localhost:3030/items"
+  baseURL: "http://localhost:3030/items",
+  withCredentials: false,
+        headers: {
+          'Access-Control-Allow-Origin' : '*',
+          'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',   
+      }
+
 })
 function App() {
   const [items, setItems] = useState([]);
