@@ -2,7 +2,6 @@ import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
-import _ from "lodash";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -11,7 +10,7 @@ const PORT = process.env.PORT || 3030;
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.json())
-app.use(express.static("../public"));
+app.use(express.static("../client/public"));
 app.use(cors());
 app.use(express.json());
 

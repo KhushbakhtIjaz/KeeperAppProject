@@ -6,12 +6,7 @@ import CreateArea from "./CreateArea";
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: "http://localhost:3030/items",
-  withCredentials: true,
-        headers: {
-          'Access-Control-Allow-Origin' : '*',
-          'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',   
-      }
+  baseURL: "http://localhost:3030/items"
 
 })
 function App() {
